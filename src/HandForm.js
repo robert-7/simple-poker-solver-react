@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 import { ToggleButton } from "react-bootstrap";
 import { ToggleButtonGroup } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 
 class HandForm extends React.Component {
   constructor(props) {
@@ -47,6 +48,8 @@ class HandForm extends React.Component {
   render() {
     return (
       <section>
+          <section id="options" className="p-3">
+          <header><h2>Game</h2></header>
         <Form onSubmit={this.handleSubmit}>
           <ToggleButtonGroup
             name="games"
@@ -82,20 +85,37 @@ class HandForm extends React.Component {
             Submit
           </Button>
         </Form>
+        </section>
 
-        <div id="table">
-          <h2>Results</h2>
-          <table className="table table-striped">
+        <section id="results" className="p-3">
+          <header><h2>Results</h2></header>
+          <Table striped bordered hover size="sm">
             <thead>
-              <tr>
-                <th>Player 1 Strategy</th>
-                <th>Player 2 Strategy</th>
-                <th>Player 1's Payoff</th>
-              </tr>
+                <tr>
+                <th>Player 1 - Strategy</th>
+                <th>Player 2 - Strategy</th>
+                <th>Player 1 - Payoff</th>
+                </tr>
             </thead>
-            <tbody id="rows"></tbody>
-          </table>
-        </div>
+            <tbody>
+                <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                </tr>
+            </tbody>
+            </Table>
+        </section>
       </section>
     );
   }
