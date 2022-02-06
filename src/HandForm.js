@@ -63,10 +63,7 @@ class HandForm extends React.Component {
                 Borel
               </ToggleButton>
               <ToggleButton id="tbg-radio-2" value={2}>
-                Von Neumann
-              </ToggleButton>
-              <ToggleButton id="tbg-radio-3" value={3}>
-                Game3 3
+                von Neumann
               </ToggleButton>
             </ToggleButtonGroup>
 
