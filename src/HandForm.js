@@ -13,7 +13,14 @@ class HandForm extends React.Component {
       anteValue: 0,
       betValue: 0,
       numCards: 0,
-      answer: [],
+      results: [
+        {
+          key: "unique row key",
+          p1: "an",
+          p2: "example",
+          p1payoff: "row",
+        },
+      ],
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -53,21 +60,22 @@ class HandForm extends React.Component {
             <h2>Game</h2>
           </header>
           <Form onSubmit={this.handleSubmit}>
-          <Form.Group className="mb-3" controlId="handform.Type">
-            <Form.Label>Game Type:</Form.Label><br/>
-            <ToggleButtonGroup
-              name="games"
-              type="radio"
-              value={this.state.algorithm}
-              onChange={this.setRadioValue}
-            >
-              <ToggleButton id="tbg-radio-1" value={1}>
-                Borel
-              </ToggleButton>
-              <ToggleButton id="tbg-radio-2" value={2}>
-                von Neumann
-              </ToggleButton>
-            </ToggleButtonGroup>
+            <Form.Group className="mb-3" controlId="handform.Type">
+              <Form.Label>Game Type:</Form.Label>
+              <br />
+              <ToggleButtonGroup
+                name="games"
+                type="radio"
+                value={this.state.algorithm}
+                onChange={this.setRadioValue}
+              >
+                <ToggleButton id="tbg-radio-1" value={1}>
+                  Borel
+                </ToggleButton>
+                <ToggleButton id="tbg-radio-2" value={2}>
+                  von Neumann
+                </ToggleButton>
+              </ToggleButtonGroup>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="handform.Ante">
@@ -114,21 +122,13 @@ class HandForm extends React.Component {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-              </tr>
+              {this.state.results.map((r, index) => (
+                <tr key={index}>
+                  <td>{r.p1}</td>
+                  <td>{r.p2}</td>
+                  <td>{r.p1payoff}</td>
+                </tr>
+              ))}
             </tbody>
           </Table>
         </section>
