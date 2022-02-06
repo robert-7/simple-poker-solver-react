@@ -1,8 +1,8 @@
 import React from "react";
-import { ToggleButtonGroup } from "react-bootstrap";
-import { ToggleButton } from "react-bootstrap";
-import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
+import { Form } from "react-bootstrap";
+import { ToggleButton } from "react-bootstrap";
+import { ToggleButtonGroup } from "react-bootstrap";
 
 class HandForm extends React.Component {
   constructor(props) {
@@ -33,15 +33,15 @@ class HandForm extends React.Component {
   }
 
   setAnteValue(event) {
-      this.setState({ anteValue: event.target.value });
+    this.setState({ anteValue: event.target.value });
   }
 
   setBetValue(event) {
-      this.setState({ betValue: event.target.value });
+    this.setState({ betValue: event.target.value });
   }
 
   setNumCards(event) {
-      this.setState({ numCards: event.target.value })
+    this.setState({ numCards: event.target.value })
   }
 
   render() {
