@@ -53,6 +53,8 @@ class HandForm extends React.Component {
             <h2>Game</h2>
           </header>
           <Form onSubmit={this.handleSubmit}>
+          <Form.Group className="mb-3" controlId="handform.Type">
+            <Form.Label>Game Type:</Form.Label><br/>
             <ToggleButtonGroup
               name="games"
               type="radio"
@@ -66,6 +68,7 @@ class HandForm extends React.Component {
                 von Neumann
               </ToggleButton>
             </ToggleButtonGroup>
+            </Form.Group>
 
             <Form.Group className="mb-3" controlId="handform.Ante">
               <Form.Label>Ante Value:</Form.Label>
@@ -100,7 +103,7 @@ class HandForm extends React.Component {
 
         <section id="results" className="p-3">
           <header>
-            <h2>Results</h2>
+            <h2 className="pb-2">Results</h2>
           </header>
           <Table striped bordered hover size="sm">
             <thead>
