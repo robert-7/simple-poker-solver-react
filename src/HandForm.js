@@ -33,7 +33,6 @@ class HandForm extends React.Component {
   handleSubmit(event) {
     // why should we have to disable something that should be auto-disabled?
     event.preventDefault();
-    alert("A name was submitted: " + this.state.value);
   }
 
   setRadioValue(value) {
