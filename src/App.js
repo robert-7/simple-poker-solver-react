@@ -8,7 +8,6 @@ function App() {
         <header className="p-3 pb-md-4 mx-auto text-center">
           <h1 className="display-4 fw-normal">Simplified Poker Game Solver</h1>
           <p className="fs-5 text-muted">
-            Poker patter:
             <br />
             Mathematics has been fascinated by poker. While a game of Texas hold
             'em or 7 Card Stud are fun, mathematics has chosen to focus on
